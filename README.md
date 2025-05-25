@@ -89,6 +89,7 @@ src/
    cloudinary.api-key=your_api_key
    cloudinary.api-secret=your_api_secret
    ```
+   Same as for Google OAuth and Mail with different id and secret 
 
 4. Run the Application
 
