@@ -1,0 +1,21 @@
+# Keep your existing rules and add/modify these:
+/target/
+!src/main/resources/static/css/output.css  # Keep the built CSS
+
+# Node.js
+node_modules/
+npm-debug.log*
+
+# IDE files
+.idea/
+*.iml
+.vscode/
+
+# Maven wrapper (optional - keep if you use it)
+!.mvn/wrapper/maven-wrapper.jar
+
+src/main/resources/application-dev.properties
+qodana.yaml
+
+
+keyfile.txt
