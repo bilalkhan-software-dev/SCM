@@ -4,6 +4,7 @@ import com.scm.Helpers.Message;
 import com.scm.Helpers.MessageType;
 import jakarta.servlet.http.HttpSession;
 import lombok.AllArgsConstructor;
+import lombok.RequiredArgsConstructor;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.security.authentication.DisabledException;
@@ -15,22 +16,20 @@ import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.security.web.SecurityFilterChain;
 
 @Configuration
-@AllArgsConstructor
+@RequiredArgsConstructor
 public class SecurityConfig {
 
-    private CustomUserDetailService customUserDetailService ;
-    private OAuthSuccessHandler handler ;
+    private final CustomUserDetailService customUserDetailService ;
+    private final OAuthSuccessHandler handler ;
+    private final PasswordEncoder passwordEncoder;
 
 
-    @Bean
-    public PasswordEncoder bCryptPasswordEncoder(){
-        return new BCryptPasswordEncoder() ;
-    }
+
 
     @Bean
     public DaoAuthenticationProvider daoAuthenticationProvider (){
         DaoAuthenticationProvider provider = new DaoAuthenticationProvider() ;
-        provider.setPasswordEncoder(bCryptPasswordEncoder());
+        provider.setPasswordEncoder(passwordEncoder);
         provider.setUserDetailsService(customUserDetailService);
         return  provider ;
     }
