@@ -13,11 +13,12 @@ A full-featured **Spring Boot web application** that allows users to manage thei
 * 🔐 **Secure Authentication** with Spring Security + OAuth2 login
 * ☁️ **Cloud Storage** for contact profile images using Cloudinary
 * 📬 **Email Integration** via Spring Boot Mail
+* 📬 **Forgot password and user verification by email** via Spring Boot Mail
 * 📚 **Relational Database Support** with Spring Data JPA and MySQL
 * 📄 **Form Validation** using Spring Validation
 * 📐 **Server-Side Templating** using Thymeleaf
 * 🛠️ **Live Reload** support using Spring DevTools
-* 💌 **Email Notifications** to users
+* 💌 **Search contact with pagination
 * ✨ **Modern UI** (TailwindCSS optional)
 * 🧪 **Unit & Security Testing** included
 
