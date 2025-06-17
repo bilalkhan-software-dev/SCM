@@ -101,7 +101,7 @@ public class ForgotPasswordController {
                     .content("OTP is Wrong")
                     .messageColorType(MessageType.red)
                     .build());
-            return "redirect:/forgotPassword";
+            return "optEntered";
         }
     }
 
